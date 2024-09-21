@@ -97,9 +97,9 @@ int main(){
 
     // printf("Deallocating...\n");
     // unallocate memeory allocated by nmap() using munmap()
-    munmap(matrixA, MB_2);
-    munmap(matrixB, MB_2);
-    munmap(matrixC, MB_2);
+    munmap(matrixA, NMAP_ALLOC_SIZE);
+    munmap(matrixB, NMAP_ALLOC_SIZE);
+    munmap(matrixC, NMAP_ALLOC_SIZE);
 
 
     return 0;
