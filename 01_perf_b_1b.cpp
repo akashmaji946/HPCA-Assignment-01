@@ -119,5 +119,35 @@ perf stat -e duration_time,user_time,system_time,cache-references,cache-misses,L
 /*------------SAMPLE-------------*/
 /*
 
+akash@victus:~/Desktop/HPCA$ perf stat -e duration_time,user_time,system_time,cache-references,cache-misses,L1-dcache-load-misses,L1-icache-load-misses,dTLB-load-misses,l1_dtlb_misses,l2_dtlb_misses,instructions,cpu-cycles,stalled-cycles-frontend,branch-instructions,branch-misses,page-faults ./01_perf_b_1b
+
+
+ Performance counter stats for './01_perf_b_1b':
+
+ 5,430,822,197,871 ns   duration_time                                                         
+ 5,426,222,405,000 ns   user_time                                                             
+       299,995,000 ns   system_time                                                           
+ 2,208,734,405,104      cache-references                                                        (41.67%)
+ 1,215,439,595,283      cache-misses                     #   55.03% of all cache refs           (41.67%)
+   987,842,568,359      L1-dcache-load-misses                                                   (41.67%)
+       218,222,364      L1-icache-load-misses                                                   (41.67%)
+        17,960,598      dTLB-load-misses                                                        (41.67%)
+     8,950,318,669      l1_dtlb_misses                                                          (41.67%)
+        18,100,999      l2_dtlb_misses                                                          (41.67%)
+24,788,744,593,334      instructions                     #    1.17  insn per cycle            
+                                                  #    0.02  stalled cycles per insn     (41.67%)
+21,121,286,004,178      cpu-cycles                                                              (41.67%)
+   607,597,544,697      stalled-cycles-frontend          #    2.88% frontend cycles idle        (41.67%)
+   562,573,540,888      branch-instructions                                                     (41.67%)
+     1,501,908,481      branch-misses                    #    0.27% of all branches             (41.67%)
+               438      page-faults                                                           
+
+    5430.822197871 seconds time elapsed
+
+    5426.222405000 seconds user
+       0.299995000 seconds sys
+
+
+akash@victus:~/Desktop/HPCA$ 
 
 */
