@@ -1,0 +1,14 @@
+Setting up kernal permissions in linux:
+--------------------------------------------
+# See permission level to -1
+sudo sysctl kernel.perf_event_paranoid=-1
+
+
+Setting up huge pages of size 2 MB
+--------------------------------------------
+# See number of huge pages:
+cat /proc/meminfo | grep Huge 
+
+# Set up 1024 huge pages
+sudo sysctl -w vm.nr_hugepages=1024
+
