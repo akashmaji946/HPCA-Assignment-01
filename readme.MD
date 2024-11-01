@@ -1,4 +1,10 @@
-# System Setup Guide [HPCA-Assignment-01]
+## About
+- Here we use perf as our performance measurement tool. It is a widely used linux  utility.
+- We measure various PMU events (hardware based and software based).
+- We use a standard O(n^3) time matrix multiplication program written in C/C++ to measure PMU events like L1/L2/L3 misses, TLB misses, page faults etc. in three orders <i,j,k>, <j, i, k> and <k,i,j>. 
+- Here, part(a) uses basic-versions with simple 4KB pages, while part(b) uses basic-versions with 2MB pages, and part(3) uses tiled-versions of those orders with 4KB pages.
+
+## System Setup Guide [HPCA-Assignment-01]
 
 This document provides instructions for setting up an Ubuntu system with essential tools and configurations.
 
